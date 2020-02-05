@@ -1,7 +1,7 @@
 $(function () {
   'use strict'
 
-  var ripples = '.avatar-icon, .btn'
+  var ripples = '.avatar-icon, .btn,.navbar-toggler'
   //creating a style object for the ripple effect
   function RippleStyle(width, height, posX, posY) {
     this.width = (width <= height) ? height : width;
@@ -33,10 +33,15 @@ $(function () {
   });
 
   //this event listener will be triggered once the ripple animation is done
-  $(ripples).on('mouseup touchend blur focusout mouseout mouseleave', '.ripple-an', function () {
+  $(ripples).on('mouseup blur mouseout touch', '.ripple-an', function () {
     $(this).fadeOut(400, () => {
       $(this).remove()
     });
+    setTimeout(() => {
+      $(this).fadeOut(400, () => {
+        $(this).remove()
+      });
+    }, 10);
   });
 
   // =======================  NAVBAR  =========================
