@@ -10,7 +10,7 @@ $(function () {
     this.left = posX - (this.width * 0.5);
   }
 
-  $(ripples).on('mousedown', function (e) {
+  $(ripples).on('mousedown touch', function (e) {
     //appending an element with a class name "btn-ripple"
 
     // $('.btn-ripple.active').remove();
@@ -33,7 +33,7 @@ $(function () {
   });
 
   //this event listener will be triggered once the ripple animation is done
-  $(ripples).on('mouseup mouseout', '.ripple-an', function () {
+  $(ripples).on('mouseup mouseleave mouseout mousemove touchmove touchcancel touchend blur focusout', '.ripple-an', function () {
     $(this).fadeOut(400, () => {
       $(this).remove()
     });
