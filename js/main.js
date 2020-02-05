@@ -33,7 +33,7 @@ $(function () {
   });
 
   //this event listener will be triggered once the ripple animation is done
-  $(ripples).on('mouseup click mouseout', '.ripple-an', function () {
+  $(ripples).on('mouseup mouseout', '.ripple-an', function () {
     $(this).fadeOut(400, () => {
       $(this).remove()
     });
@@ -43,6 +43,12 @@ $(function () {
       });
     }, 10);
   });
+
+  $(ripples).blur(function(){
+    $('.ripple-an').fadeOut(400, () => {
+      $('.ripple-an').remove()
+    });
+  })
 
   // =======================  NAVBAR  =========================
 
