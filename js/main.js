@@ -1,7 +1,7 @@
 $(function () {
   'use strict'
 
-  var ripples = '.avatar-icon, .btn,.navbar-toggler'
+  const ripples = '.avatar-icon, .btn,.navbar-toggler'
   //creating a style object for the ripple effect
   function RippleStyle(width, height, posX, posY) {
     this.width = (width <= height) ? height : width;
@@ -10,30 +10,47 @@ $(function () {
     this.left = posX - (this.width * 0.5);
   }
 
-  $(ripples).on('mousedown', function (e) {
-    //appending an element with a class name "btn-ripple"
+  if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+    $(ripples).on('touchstart', function (e) {
 
-    // $('.btn-ripple.active').remove();
-    var rippleEl = $('<span class="ripple-an"></span>').appendTo(this);
+      //appending an element with a class name "btn-ripple"
+      var rippleEl = $('<span class="ripple-an"></span>').appendTo(this);
 
-    //getting the button's offset position
-    var pos = $(this).offset();
+      //getting the button's offset position
+      var pos = $(this).offset();
 
-    //get the button's width and height
-    var width = $(this).outerWidth();
-    var height = $(this).outerHeight();
+      //get the button's width and height
+      var width = $(this).outerWidth();
+      var height = $(this).outerHeight();
 
-    //get the cursor's x and y position within the button
-    var posX = e.pageX - pos.left;
-    var posY = e.pageY - pos.top;
+      var posX = e.targetTouches[0].pageX - pos.left;
+      var posY = e.targetTouches[0].pageY - pos.top;
 
-    //adding a css style to the ripple effect
-    var rippleStyle = new RippleStyle(width, height, posX, posY);
-    rippleEl.css(rippleStyle);
-  });
+      var rippleStyle = new RippleStyle(width, height, posX, posY);
+      rippleEl.css(rippleStyle);
+    });
+  } else {
+    $(ripples).on('mousedown', function (e) {
 
-  //this event listener will be triggered once the ripple animation is done
-  $(ripples).on('mouseup mouseleave mouseout touchstart blur focusout', '.ripple-an', function () {
+      //appending an element with a class name "btn-ripple"
+      var rippleEl = $('<span class="ripple-an"></span>').appendTo(this);
+
+      //getting the button's offset position
+      var pos = $(this).offset();
+
+      //get the button's width and height
+      var width = $(this).outerWidth();
+      var height = $(this).outerHeight();
+
+      var posX = e.pageX - pos.left;
+      var posY = e.pageY - pos.top;
+
+      var rippleStyle = new RippleStyle(width, height, posX, posY);
+      rippleEl.css(rippleStyle);
+    });
+  }
+
+  $(ripples).on('mouseup mouseleave mouseout touchend blur focusout', '.ripple-an', function () {
     $(this).fadeOut(400, () => {
       $(this).remove()
     });
@@ -44,11 +61,12 @@ $(function () {
     }, 10);
   });
 
-  $(ripples).blur(function(){
+  $(ripples).blur(function () {
     $('.ripple-an').fadeOut(400, () => {
       $('.ripple-an').remove()
     });
   })
+
 
   // =======================  NAVBAR  =========================
 
