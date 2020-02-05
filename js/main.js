@@ -33,7 +33,7 @@ $(function () {
   });
 
   //this event listener will be triggered once the ripple animation is done
-  $(ripples).on('mouseup focusout mouseout', '.ripple-an', function () {
+  $(ripples).on('mouseup click mouseout', '.ripple-an', function () {
     $(this).fadeOut(400, () => {
       $(this).remove()
     });

@@ -192,8 +192,8 @@ section,
     background: #fff7;
     position: absolute;
     border-radius: 100%;
-    animation: ripple .3s forwards;
-    -webkit-animation: ripple .3s forwards;
+    animation: ripple .4s forwards;
+    -webkit-animation: ripple .4s forwards;
     transform: scale(0);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -203,12 +203,12 @@ section,
 
 @keyframes ripple {
     100% {
-        transform: scale(2);
-        -webkit-transform: scale(2);
-        -moz-transform: scale(2);
-        -ms-transform: scale(2);
-        -o-transform: scale(2);
-    }
+        transform: scale(3);
+        -webkit-transform: scale(3);
+        -moz-transform: scale(3);
+        -ms-transform: scale(3);
+        -o-transform: scale(3);
+}
 }
 
 
