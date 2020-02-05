@@ -1,0 +1,208 @@
+* {
+    margin: auto;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+    letter-spacing: .4px;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(blue, dodgerblue);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-transform: capitalize;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.navbar {
+    font-size: 23px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.navbar.bg-dark {
+    font-size: larger;
+    box-shadow: -3px 1.5px 4px 3px #0007;
+    background: #212529 !important
+}
+
+.navbar.bg-dark .navbar-brand {
+    font-size: 25px;
+}
+
+/*=========================    HEADER    =========================*/
+header#home {
+    background: url('../img/header-bg.jpg');
+}
+
+/*=========================    GLOBAL    =========================*/
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+/*=========================    #ABOUT    =========================*/
+section,
+#home {
+    min-height: 100vh !important
+}
+
+.container,
+.container-fluid {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    line-height: 1.8
+}
+
+/*=========================    #PORTFOLIO    =========================*/
+#portfolio {
+    background: linear-gradient(#fff, #eee, #ddd, #eee, #fff);
+    padding-bottom: 25px
+}
+
+/*=========================    #TEAM    =========================*/
+.avatar-img {
+    width: 225px;
+    height: 225px;
+    background: #ddd;
+    padding: 7px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.avatar-img>img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.social-icons-list {
+    list-style: none;
+    display: flex;
+}
+
+.avatar-icon .ripple-an {
+    background: #6300ee75
+}
+
+.avatar-icon {
+    border-radius: 50%;
+    background: #6300ee25;
+    width: 50px;
+    height: 50px;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden
+}
+
+.btn,
+.btn:focus {
+    position: relative;
+    overflow: hidden;
+    box-shadow: -3px 3px 2px 1px rgba(0, 0, 0, 0.5)
+}
+
+.btn:active {
+    box-shadow: -3px 3px 5px 2px rgba(0, 0, 0, 0.5)
+}
+
+.avatar-icon:last-child {
+    margin-right: 5rem !important
+}
+
+.avatar-icon:first-child {
+    margin-left: 1.5rem !important
+}
+
+/*=========================    THE RIPPLE EFFECT    =========================*/
+.ripple-an {
+    background: #fff7;
+    position: absolute;
+    border-radius: 100%;
+    animation: ripple .3s forwards;
+    -webkit-animation: ripple .3s forwards;
+    transform: scale(0);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+@keyframes ripple {
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+    }
+}
+
+
+/*=========================    #CONTACT    =========================*/
+#contact {
+    background: #212529 !important;
+}
