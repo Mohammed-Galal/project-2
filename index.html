@@ -31,52 +31,54 @@
 
 <body>
 
-    <nav class="navbar container-fluid navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <!--	NavBar Brand	-->
-            <a class="navbar-brand ml-0 text-secondry" href="#" data-scroll-target="home">
-                Navbar
-            </a>
-            <!--	The Toggle Btn	-->
-            <button class="navbar-toggler ripple" type="button" data-toggle="collapse" data-target="#navbar-collapse"
-                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--	NavBar Content	-->
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <!--	Nav Links	-->
-                <ul class="navbar-nav ml-auto mr-0">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-scroll-target="home">
-                            home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-scroll-target="about">
-                            about
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-scroll-target="portfolio">
-                            portfolio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-scroll-target="team">
-                            team
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-scroll-target="contact">
-                            contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <header id="home" class="container-fluid text-center text-light">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!--	NavBar Brand	-->
+                <a class="navbar-brand ml-0 text-secondry" href="#" data-scroll-target="home">
+                    Navbar
+                </a>
+                <!--	The Toggle Btn	-->
+                <button class="navbar-toggler ripple" type="button" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--	NavBar Content	-->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <!--	Nav Links	-->
+                    <ul class="navbar-nav ml-auto mr-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-target="home">
+                                home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-target="about">
+                                about
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-target="portfolio">
+                                portfolio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-target="team">
+                                team
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-scroll-target="contact">
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="row">
             <div class="col-10">
                 <p class="font-italic mt-5 font-weight-bold h1 text-capitalize custom-font">
@@ -85,24 +87,25 @@
                 <p class="lead display-4 my-4 font-weight-bold text-uppercase">
                     it's<span class="text-warning"> nice </span>to meet <span class="text-danger">you</span>
                 </p>
-                <button data-scroll-target="about" type="button" class="mt-5 btn btn-xl bg-warning text-light py-2 px-5">
+                <button data-scroll-target="about" type="button"
+                    class="mt-5 btn btn-xl bg-warning text-light py-2 px-5">
                     learn more
                 </button>
             </div>
         </div>
     </header>
 
-    <main class="text-center">
-        <section id="about" class="container">
+    <!-- <main class="text-center"> -->
+    <section id="about" class="text-center">
+        <div class="container">
             <div class="row">
-                <div class="col-12 my-5">
+                <div class="col-12 mb-1 adjust-mt">
                     <p class="display-4 font-weight-bold mb-3 text-uppercase">about</p>
                     <span class="font-italic text-black-50 text-capitalize font-weight-bold">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     </span>
                 </div>
-
-                <div class="col-lg-4 col-12 mt-5 border-right">
+                <div class="col-lg-4 col-12 mt-5">
                     <p class="display-4 bg-warning avatar text-light text-center"><i
                             class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i></p>
                     <p class="h1 text-capitalize">e-commerse</p>
@@ -110,7 +113,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptate?
                     </p>
                 </div>
-                <div class="col-lg-4 col-12 mt-5 border-right">
+                <div class="col-lg-4 col-12 my-5">
                     <p class="display-4 bg-warning avatar text-light text-center"><i
                             class="fas fa-laptop fa-stack-1x fa-inverse"></i></p>
                     <p class="h1 text-capitalize">responsive design</p>
@@ -118,7 +121,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptate?
                     </p>
                 </div>
-                <div class="col-lg-4 col-12 mt-5">
+                <div class="col-lg-4 col-12">
                     <p class="display-4 bg-warning avatar text-light text-center"><i
                             class="fas fa-lock fa-stack-1x fa-inverse"></i></p>
                     <p class="h1 text-capitalize">web security</p>
@@ -126,16 +129,18 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, voluptate?
                     </p>
                 </div>
-        </section>
+            </div>
+        </div>
+    </section>
 
-        <!-- <section id="services" class="container">
-
+    <!-- <section id="services" class="container">
+                
         </section> -->
 
-        <section id="portfolio" class="container">
+    <section id="portfolio" class="text-center">
+        <div class="container align-items-center justify-content-center">
             <div class="row">
-
-                <div class="col-12">
+                <div class="col-12 adjust-mt-2">
                     <p class="h1 text-uppercase">
                         portfolio
                     </p>
@@ -211,79 +216,78 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="team" class="container mt-4">
+    <section id="team" class="text-center pb-5">
+        <div class="container">
             <div class="row">
-
-                <div class="col-12 mb-5">
+                <div class="col-12 adjust-mt-3">
                     <p class="h1 font-weight-bold text-uppercase">our amazing team</p>
                     <span class="lead text-dark font-italic">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit.</span>
                 </div>
+                <div class="col-12 row mt-5">
 
-                <div class="col-12 col-lg-4">
-                    <div class="avatar-img rounded-circle"><img src="img/team/1.jpg" alt=""></div>
-
-                    <p class="h2 my-1">
-                        Kay Garland
-                    </p>
-                    <span class="lead text-black-50 text-capitalize">
-                        designer
-                    </span>
-                    <ul class="social-icons-list mt-3 text-light flex-row justify-content-center">
-                        <li class="avatar-icon bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
-                        <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
-                        <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
-                    </ul>
+                    <div class="col-12 col-lg-4">
+                        <div class="avatar-img rounded-circle"><img src="img/team/1.jpg" alt=""></div>
+                        <p class="h2 my-1">
+                            Kay Garland
+                        </p>
+                        <span class="lead text-black-50 text-capitalize">
+                            designer
+                        </span>
+                        <ul class="social-icons-list mt-4 text-light flex-row justify-content-center">
+                            <li class="avatar-icon bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
+                            <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
+                            <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="avatar-img"><img src="img/team/me.jpg" alt=""></div>
+                        <p class="h2 my-1">
+                            Mohammed Galal
+                        </p>
+                        <span class="lead text-black-50 text-capitalize">
+                            front-end web developer
+                        </span>
+                        <ul class="social-icons-list mt-4 text-light flex-row justify-content-center">
+                            <li class="avatar-icon bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
+                            <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
+                            <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="avatar-img"><img src="img/team/3.jpg" alt=""></div>
+                        <p class="h2 my-1">
+                            Diana Pertesen
+                        </p>
+                        <span class="lead text-black-50 text-capitalize">
+                            marketer
+                        </span>
+                        <ul class="social-icons-list mt-4 text-light flex-row justify-content-center">
+                            <li class="avatar-icon ml-2 bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
+                            <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
+                            <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="col-12 col-lg-4">
-                    <div class="avatar-img"><img src="img/team/me.jpg" alt=""></div>
-
-                    <p class="h2 my-1">
-                        Mohammed Galal
-                    </p>
-                    <span class="lead text-black-50 text-capitalize">
-                        front-end web developer
-                    </span>
-                    <ul class="social-icons-list mt-3 text-light flex-row justify-content-center">
-                        <li class="avatar-icon bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
-                        <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
-                        <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                    <div class="avatar-img"><img src="img/team/3.jpg" alt=""></div>
-
-                    <p class="h2 my-1">
-                        Diana Pertesen
-                    </p>
-                    <span class="lead text-black-50 text-capitalize">
-                        marketer
-                    </span>
-                    <ul class="social-icons-list mt-3 text-light flex-row justify-content-center">
-                        <li class="avatar-icon ml-2 bg-info mr-3 h3"><i class="fab fa-twitter"></i></li>
-                        <li class="avatar-icon bg-primary mx-3 h3"><i class="fab fa-facebook-f"></i></li>
-                        <li class="avatar-icon bg-warning mr-5 ml-3 h3"><i class="fab fa-linkedin-in"></i></li>
-                    </ul>
-                </div>
-                <p class="col-10 col-lg-8 lead h2 mt-1 mb-4 text-black-50 text-capitalize font-weight-bold">
+                <p class="col-10 col-lg-8 lead h2 mt-4 text-black-50 text-capitalize font-weight-bold">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque consequatur quis officia a cum
                     excepturi! Quaerat inventore ex repellendus voluptatibus.
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="container-fluid text-light">
+    <section id="contact" class="text-center text-light pt-5">
+        <div class="container">
             <div class="row">
-
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mt-4">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                     <h3 class="section-subheading text-white-50">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <div class="col-lg-12 my-5">
+                <div class="col-lg-12 mt-4 my-lg-5">
                     <form id="contactForm" name="sentMessage" novalidate="novalidate">
                         <div class="row">
                             <div class="col-md-6">
@@ -308,13 +312,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <textarea class="form-control" id="message" placeholder="Your Message *"
-                                        required="required"
-                                        data-validation-required-message="Please enter a message." rows="6"></textarea>
+                                        required="required" data-validation-required-message="Please enter a message."
+                                        rows="6"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center mt-5">
+                            <div class="col-lg-12 text-center mt-lg-5">
                                 <div id="success"></div>
                                 <button id="sendMessageButton" class="btn ripple btn-xl text-light bg-warning"
                                     type="submit" onclick="return false">Send Message</button>
@@ -323,8 +326,9 @@
                     </form>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <!-- </main> -->
     <!--	your custom js	-->
     <script src="js/ripple.js"></script>
     <script src="js/main.js"></script>
