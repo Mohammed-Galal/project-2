@@ -189,6 +189,10 @@ section,
     margin-top: 4rem !important
 }
 /*=========================    #TEAM    =========================*/
+#team {
+    max-width: 100vh;
+    position: relative
+}
 #team .adjust-mt-3{
     margin-top: 5rem
 }
