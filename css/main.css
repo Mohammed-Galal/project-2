@@ -173,13 +173,13 @@ section,
     overflow: hidden
 }
 
-.avatar-icon:last-child {
+/* .avatar-icon:last-child {
     margin-right: 5rem !important
-}
+} */
 
-.avatar-icon:first-child {
+/* .avatar-icon:first-child {
     margin-left: 1.5rem !important
-}
+} */
 /*=========================    #ABOUT    =========================*/
 #about .adjust-mt{
     margin-top: 4.7rem
@@ -189,10 +189,6 @@ section,
     margin-top: 4rem !important
 }
 /*=========================    #TEAM    =========================*/
-#team {
-    max-width: 100vh;
-    position: relative
-}
 #team .adjust-mt-3{
     margin-top: 5rem
 }

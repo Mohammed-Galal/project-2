@@ -1,4 +1,4 @@
-.ripple-req {
+.ripple {
     position: relative !important;
     overflow: hidden !important;
 }
@@ -7,13 +7,17 @@
     background: #fff7;
     position: absolute;
     border-radius: 100%;
-    animation: ripple .4s forwards;
-    -webkit-animation: ripple .4s forwards;
+    animation: ripple .3s forwards;
+    -webkit-animation: ripple .3s forwards;
     transform: scale(0);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
 }
 
 @keyframes ripple {
