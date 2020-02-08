@@ -7,8 +7,8 @@
     background: #fff7;
     position: absolute;
     border-radius: 100%;
-    animation: ripple .3s forwards;
-    -webkit-animation: ripple .3s forwards;
+    animation: ripple .2s linear forwards;
+    -webkit-animation: ripple .2s linear forwards;
     transform: scale(0);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
