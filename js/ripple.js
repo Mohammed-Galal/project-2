@@ -54,13 +54,13 @@ $(function () {
 
     // mousemove mouseleave mouseout 
     $('.ripple').on('mouseup touchend touchcancel', '.ripple-an', function () {
-        $(this).fadeOut(350, () => {
+        $(this).fadeOut(600, () => {
             $(this).remove()
         });
     });
 
     $("*").not('.ripple,.ripple-an').on('mouseup touchmove', function () {
-        $('.ripple-an').fadeOut(350, () => {
+        $('.ripple-an').fadeOut(600, () => {
             $('.ripple-an').remove()
         });
     });
