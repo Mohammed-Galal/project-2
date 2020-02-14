@@ -1,14 +1,21 @@
 .ripple {
     position: relative !important;
     overflow: hidden !important;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .ripple-an {
-    background: #fff7;
+    background: #f7f7f7c9;
+    opacity: 1;
+    transition: opacity 1s;
+    width: 0px;
+    z-index: 1;
     position: absolute;
     border-radius: 100%;
-    animation: ripple .2s cubic-bezier(0.90, 0, 0.75, 0.72) forwards;
-    -webkit-animation: ripple .2s cubic-bezier(0.90, 0, 0.75, 0.72) forwards;
+    animation: ripple .2s ease-in forwards;
+    -webkit-animation: ripple .2s ease-in forwards;
     transform: scale(.2);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -18,9 +25,13 @@
     -moz-transform: scale(.2);
     -ms-transform: scale(.2);
     -o-transform: scale(.2);
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
 }
 
-@keyframes ripple {
+@-webkit-keyframes ripple {
     100% {
         transform: scale(3);
         -webkit-transform: scale(3);
@@ -29,7 +40,8 @@
         -o-transform: scale(3);
     }
 }
-@-webkit-keyframes ripple {
+
+@keyframes ripple {
     100% {
         transform: scale(3);
         -webkit-transform: scale(3);
