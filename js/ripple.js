@@ -1,1 +1,49 @@
-var _0x4a06=['.ripple-an','mousedown','px;\x20height:\x20','userAgent','forEach','span','top','.ripple','getBoundingClientRect','ripple-an','style','match','offsetHeight','px;','addEventListener','opacity','appendChild','touchmove','cssText','px;\x20left:\x20','targetTouches','querySelectorAll','className','scrollY','px;\x20top:\x20','createElement','scrollX','touchend','left','width:\x20','mouseleave','remove','mouseup','offsetWidth'];(function(_0x5eed73,_0x54c087){var _0x11682f=function(_0x2a83c0){while(--_0x2a83c0){_0x5eed73['push'](_0x5eed73['shift']());}};_0x11682f(++_0x54c087);}(_0x4a06,0x135));var _0x435a=function(_0x5eed73,_0x54c087){_0x5eed73=_0x5eed73-0x0;var _0x11682f=_0x4a06[_0x5eed73];return _0x11682f;};const ripple_elems=document['querySelectorAll'](_0x435a('0x4'));const mobileSupport=navigator[_0x435a('0x0')]['toLowerCase']();if(mobileSupport[_0x435a('0x8')](/mobile/i)){ripple_elems[_0x435a('0x1')](_0xe54631=>{'use strict';_0xe54631[_0x435a('0xb')]('touchstart',_0x139025=>{var _0x57f479=document[_0x435a('0x16')](_0x435a('0x2'));_0x57f479['className']=_0x435a('0x6');_0xe54631[_0x435a('0xd')](_0x57f479);var _0x47aa0f={'top':_0xe54631[_0x435a('0x5')]()['top']+window[_0x435a('0x14')],'left':_0xe54631[_0x435a('0x5')]()[_0x435a('0x19')]+window[_0x435a('0x17')]};var _0x2a3e46=_0xe54631[_0x435a('0x1e')]<=_0xe54631[_0x435a('0x9')]?_0xe54631[_0x435a('0x9')]:_0xe54631[_0x435a('0x1e')];var _0x38268a=_0x139025[_0x435a('0x11')][0x0]['pageX']-_0x47aa0f['left'];var _0xf1c16e=_0x139025['targetTouches'][0x0]['pageY']-_0x47aa0f['top'];var _0x53da64=_0xf1c16e-_0x2a3e46*0.5+_0x435a('0xa');var _0xa07291=_0x38268a-_0x2a3e46*0.5+_0x435a('0xa');_0x57f479[_0x435a('0x7')][_0x435a('0xf')]=_0x435a('0x1a')+_0x2a3e46+_0x435a('0x21')+_0x2a3e46+'px;\x20top:\x20'+_0x53da64+_0x435a('0x10')+_0xa07291+'px';});_0xe54631[_0x435a('0xb')]('touchend',_0x5cdb2a);document[_0x435a('0xb')](_0x435a('0x18'),_0x5cdb2a);document[_0x435a('0xb')](_0x435a('0x1d'),_0x5cdb2a);document['addEventListener'](_0x435a('0xe'),_0x5cdb2a);function _0x5cdb2a(){'use strict';_0xe54631['querySelectorAll'](_0x435a('0x1f'))['forEach'](_0x4b55f8=>{_0x4b55f8[_0x435a('0x7')][_0x435a('0xc')]=0x0;setTimeout(()=>{_0x4b55f8[_0x435a('0x1c')]();},0x3e8);});};});}else{ripple_elems[_0x435a('0x1')](_0x52542a=>{'use strict';_0x52542a[_0x435a('0xb')](_0x435a('0x20'),_0x5089bb=>{var _0x3dd927=document[_0x435a('0x16')]('span');_0x3dd927[_0x435a('0x13')]='ripple-an';_0x52542a[_0x435a('0xd')](_0x3dd927);var _0xedc630={'top':_0x52542a[_0x435a('0x5')]()['top']+window[_0x435a('0x14')],'left':_0x52542a[_0x435a('0x5')]()[_0x435a('0x19')]+window[_0x435a('0x17')]};var _0x5133d6=_0x52542a['offsetWidth']<=_0x52542a[_0x435a('0x9')]?_0x52542a[_0x435a('0x9')]:_0x52542a[_0x435a('0x1e')];var _0x19baa6=_0x52542a[_0x435a('0x1e')]<=_0x52542a[_0x435a('0x9')]?_0x52542a[_0x435a('0x9')]:_0x52542a[_0x435a('0x1e')];var _0x4d83cf=_0x5089bb['pageX']-_0xedc630[_0x435a('0x19')];var _0x123900=_0x5089bb['pageY']-_0xedc630[_0x435a('0x3')];var _0x1c8e0e=_0x123900-_0x5133d6*0.5+_0x435a('0xa');var _0x2c429e=_0x4d83cf-_0x5133d6*0.5+_0x435a('0xa');_0x3dd927[_0x435a('0x7')][_0x435a('0xf')]=_0x435a('0x1a')+_0x5133d6+_0x435a('0x21')+_0x5133d6+_0x435a('0x15')+_0x1c8e0e+_0x435a('0x10')+_0x2c429e+'px';});_0x52542a[_0x435a('0xb')](_0x435a('0x1d'),_0x3b9ae2);_0x52542a[_0x435a('0xb')](_0x435a('0x1b'),_0x3b9ae2);function _0x3b9ae2(){'use strict';_0x52542a[_0x435a('0x12')](_0x435a('0x1f'))[_0x435a('0x1')](_0x9ccfa=>{_0x9ccfa[_0x435a('0x7')]['opacity']=0x0;setTimeout(()=>{_0x9ccfa['remove']();},0x3e8);});};});}
+const in__mobile = window.navigator.userAgent.toLowerCase().match(/mobile/i);
+
+const ripple__ele = function(event) {
+  "use strict";
+  if (this.hasAttribute("disabled")) return;
+  //getting the element"s offset position
+  const pos = {
+    top: this.getBoundingClientRect().top + window.scrollY,
+    left: this.getBoundingClientRect().left + window.scrollX
+  };
+  //get the element's dimentions
+  const dimention =
+    this.offsetWidth <= this.offsetHeight
+      ? this.offsetHeight
+      : this.offsetWidth;
+  let posX =
+    (in__mobile ? event.targetTouches[0].pageX : event.pageX) - pos.left;
+  let posY =
+    (in__mobile ? event.targetTouches[0].pageY : event.pageY) - pos.top;
+  //getting the cursor/touch position
+  const top = posY - dimention * 0.5 + "px;";
+  const left = posX - dimention * 0.5 + "px;";
+  const rippleEl = document.createElement("span");
+  rippleEl.className = "ripple-an";
+  rippleEl.style.cssText = `width: ${dimention}px; height: ${dimention}px; top: ${top}px; left: ${left}px;`;
+  this.appendChild(rippleEl);
+  rippleEl.addEventListener(in__mobile ? "touchend" : "mouseup", ripple_fade);
+};
+
+function ripple_fade() {
+  document.querySelectorAll(".ripple-an").forEach(o => {
+    o.style.opacity = 0;
+    o.addEventListener("transitionend", () => o.remove());
+  });
+}
+
+window.onload = function() {
+  const ripple_elems = document.querySelectorAll(".ripple");
+  ripple_elems.forEach((ele, ind, nod) => {
+    ele.addEventListener(in__mobile ? "touchstart" : "mousedown", ripple__ele, {
+      passive: true
+    });
+  });
+};
+
+window.addEventListener(in__mobile ? "touchend" : "mouseup", ripple_fade);
+// addEventListener(in__mobile ? "touchend" : "mouseup", ripple_fade);
+
+// const data__Spy = document.querySelectorAll("[data-spy]");

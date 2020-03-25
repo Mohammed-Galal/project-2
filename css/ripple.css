@@ -1,52 +1,70 @@
+:root {
+  --ripple-opacity: 0.35;
+  --ripple-start-size: 0;
+  --ripple-end-size: 3.5;
+  --ripple-animation: .8s ease-in;
+  --ripple-fade-duration: 0.9s linear;
+}
+
+/*========================     RIPPLE     ========================*/
 .ripple {
-    position: relative !important;
-    overflow: hidden !important;
-    z-index: 2;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: #0000;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1;
+  user-select: none;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .ripple-an {
-    background: #f7f7f765;
-    opacity: 1;
-    transition: opacity .5s;
-    width: 0px;
-    z-index: 1;
-    position: absolute;
-    border-radius: 100%;
-    animation: ripple .2s ease-in forwards;
-    -webkit-animation: ripple .2s ease-in forwards;
-    transform: scale(.5);
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -ms-transform: scale(.5);
-    -o-transform: scale(.5);
-    -webkit-transition: opacity .5s;
-    -moz-transition: opacity .5s;
-    -ms-transition: opacity .5s;
-    -o-transition: opacity .5s;
-}
-
-@-webkit-keyframes ripple {
-    100% {
-        transform: scale(3);
-        -webkit-transform: scale(3);
-        -moz-transform: scale(3);
-        -ms-transform: scale(3);
-        -o-transform: scale(3);
-    }
+  mask-image: radial-gradient(circle, white, black);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+  z-index: -1;
+  display: block;
+  background: currentColor;
+  opacity: var(--ripple-opacity, 0.3);
+  position: absolute;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  transform: scale(var(--ripple-start-size), 0);
+  -webkit-transform: scale(var(--ripple-start-size), 0);
+  -moz-transform: scale(var(--ripple-start-size), 0);
+  -ms-transform: scale(var(--ripple-start-size), 0);
+  -o-transform: scale(var(--ripple-start-size), 0);
+  animation: ripple var(--ripple-animation, 1s ease-out) forwards;
+  -webkit-animation: ripple var(--ripple-animation, 1s ease-out) forwards;
+  -moz-animation: ripple var(--ripple-animation, 1s ease-out) forwards;
+  -ms-animation: ripple var(--ripple-animation, 1s ease-out) forwards;
+  -o-animation: ripple var(--ripple-animation, 1s ease-out) forwards;
+  transition: opacity var(--ripple-fade-duration, 0.4s ease-out);
+  -webkit-transition: opacity var(--ripple-fade-duration, 0.4s ease-out);
+  -moz-transition: opacity var(--ripple-fade-duration, 0.4s ease-out);
+  -ms-transition: opacity var(--ripple-fade-duration, 0.4s ease-out);
+  -o-transition: opacity var(--ripple-fade-duration, 0.4s ease-out);
+  transition-delay: 0.1s;
 }
 
 @keyframes ripple {
-    100% {
-        transform: scale(3);
-        -webkit-transform: scale(3);
-        -moz-transform: scale(3);
-        -ms-transform: scale(3);
-        -o-transform: scale(3);
-    }
+  100% {
+    transform: scale(var(--ripple-end-size, 3.5));
+    -webkit-transform: scale(var(--ripple-end-size, 3.5));
+    -moz-transform: scale(var(--ripple-end-size, 3.5));
+    -ms-transform: scale(var(--ripple-end-size, 3.5));
+    -o-transform: scale(var(--ripple-end-size, 3.5));
+  }
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    transform: scale(var(--ripple-end-size, 3.5));
+    -webkit-transform: scale(var(--ripple-end-size, 3.5));
+    -moz-transform: scale(var(--ripple-end-size, 3.5));
+    -ms-transform: scale(var(--ripple-end-size, 3.5));
+    -o-transform: scale(var(--ripple-end-size, 3.5));
+  }
 }
